@@ -1,0 +1,2 @@
+# Minimal requirements for MVP
+# matplotlib optional for later visualization
