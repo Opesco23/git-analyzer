@@ -31,7 +31,7 @@ def get_commits(repo='.', since=None, until=None):
         date = atime.split()[0]
         # get files changed in that commit
         try:
-            files_raw = _run_git(['diff-tree', '--no-commit-id', '--name-only', '-r', chash], repo)
+            files_raw = _run_git(['diff-tree', '--no-commit-id', '--name-only', '-r', '--root', chash], repo)
             files = [f.strip() for f in files_raw.splitlines() if f.strip()]
         except subprocess.CalledProcessError:
             files = []

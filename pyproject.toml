@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "git-analyzer"
+version = "0.1.0"
+description = "CLI tool to analyze a git repository and produce basic statistics"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Oniyide Opeyemi" }
+]
+requires-python = ">=3.6"
+
+[tool.setuptools.packages.find]
+include = ["git_analyzer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
